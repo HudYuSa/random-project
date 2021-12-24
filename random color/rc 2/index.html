@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>random color</title>
+	<link rel="stylesheet" href="random.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/12f9c95a9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-sm mx-auto my-5 text-center">
+		<h1>background color :</h1>
+		<label id="label" for="color" class="display-6 my-2">play with color</label><br>
+		<input type="text" name="color" class=" display-6" id="color"
+			placeholder="ex: #123456 or ex:black or ex: rgb(0,0,0)"><br>
+		<button class="mt-4 w-100 d-block mx-auto" id="click-btn">selected color</button>
+		<button class="my-1 w-100 d-block mx-auto" id="random">random color</button>
+		<input type="range" class="mt-4" id="red-line" min="0" max="255">
+		<input type="range" class="my-4" id="green-line" min="0" max="255">
+		<input type="range" id="blue-line" min="0" max="255">
+	</div>
+</body>
+<script src="random.js"></script>
+
+</html>

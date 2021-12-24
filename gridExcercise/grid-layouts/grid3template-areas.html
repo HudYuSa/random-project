@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <!-- <link rel="stylesheet" href="grid.css"> -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: .2em;
+      display: grid;
+      height: 100vh;
+      gap: .2em;
+      grid-template-rows: auto auto 4fr 1fr auto auto;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "side"
+        "ads"
+        "footer"
+      ;
+    }
+
+    .child {
+      border: .1em solid maroon;
+      padding: 1em;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .child:nth-child(odd) {
+      background-color: aqua;
+    }
+
+    .child:nth-child(even) {
+      background-color: plum;
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+    }
+
+    .header div {
+      margin: 0 1em;
+    }
+
+    .header div:nth-child(2) {
+      margin-left: auto;
+    }
+
+    .navigation {
+      grid-area: nav;
+    }
+
+    .main {
+      grid-area: main;
+    }
+
+    .sidebar {
+      grid-area: side;
+    }
+
+    .ads {
+      grid-area: ads;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    @media screen and (min-width:780px) {
+      .container {
+        gap: .5em;
+        grid-template-rows: auto auto 4fr 1fr;
+        grid-template-areas:
+          "header header header"
+          "nav nav nav"
+          "side main main"
+          "ads footer footer";
+      }
+    }
+
+    @media screen and (min-width:900px) {
+      .container {
+        gap: .5em;
+        grid-template-rows: auto auto 4fr 1fr;
+        grid-template-areas:
+          "header header header header header header"
+          ". side nav nav ads ."
+          ". side main main ads ."
+          "footer footer footer footer footer footer";
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="child header">
+      <div>home</div>
+      <div>about</div>
+      <div>contact</div>
+    </div>
+    <div class="child navigation">
+      navigation
+    </div>
+    <div class="child main">
+      main
+    </div>
+    <div class="child sidebar">
+      sidebar
+    </div>
+    <div class="child ads">
+      ads
+    </div>
+    <div class="child footer">
+      footer
+    </div>
+  </div>
+
+
+  <script>
+
+  </script>
+</body>
+
+</html>
