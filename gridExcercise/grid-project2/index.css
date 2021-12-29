@@ -1,0 +1,119 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-size: 13px;
+}
+:root{
+  --primary-clr: hsl(263, 55%, 52%);
+  --secondary-clr: hsl(217, 19%, 35%);
+  --tertiary-clr:hsl(219, 29%, 14%);
+  --quaternary-clr:hsl(0, 0%, 100%);
+
+  --bg-primary:hsl(0, 0%, 81%);
+  --bg-secondary:hsl(210, 46%, 95%);
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed"; /*eg Ubuntu*/
+  src: url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
+  font-weight: 500;
+}
+/* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+body{
+  font-family: "Barlow Semi Condensed",sans-serif;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container{
+  width: 90%;
+  display: grid;
+  grid-template-areas: 
+    "b1 b1 b1 b1 b2 b5"
+    "b3 b4 b4 b4 b4 b5";
+  gap: 2em;
+}
+.box{
+  padding: 2em;
+  /* overflow: hidden; */
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  line-height: 1.5em;
+}
+.box1{
+  grid-area:  b1;
+  position: relative;  
+  background-color: var(--primary-clr);
+  color: white;
+}
+.box2{
+  grid-area: b2;
+  color: white;
+  background-color: var(--secondary-clr);
+}
+.box3{
+  grid-area: b3;
+  color: #333;
+  background-color: var(--quaternary-clr);
+}
+.box4{
+  grid-area: b4;
+  background-color: var(--tertiary-clr);
+  color:white;
+}
+.box5{
+  grid-area: b5;
+  background-color: var(--quaternary-clr);
+  color: #333;
+}
+.user{
+  display: flex;
+  align-items: center;
+}
+.profile-img{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: .1em;
+  background-position: center;
+}
+.box1 .profile-img{background-image: url("images/image-daniel.jpg");}
+.box2 .profile-img{background-image: url("images/image-jonathan.jpg");}
+.box3 .profile-img{background-image: url("images/image-jeanette.jpg");}
+.box4 .profile-img{background-image: url("images/image-patrick.jpg");}
+.box5 .profile-img{background-image: url("images/image-kira.jpg");}
+
+.profile-img img{
+  width: 100%;
+}
+.title{
+  font-size: .7rem;
+  opacity: .9;
+}
+/* .profile-img img{
+  width: 100%;
+} */
+.name-and-title{
+  margin-left: .5em;
+}
+
+.svg-img{
+  position: absolute;
+  top: 0;
+  right: 15%;
+  transform: translateX(15%);
+  z-index: 0;
+  opacity: .7;
+}
+
+.content{
+  position: relative;
+  z-index: 2;
+  margin-top: 1em;
+}
